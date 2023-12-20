@@ -1,0 +1,814 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+* {margin: 0;padding: 0;}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /* place-items: center; */
+  height: 100%;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background:  linear-gradient(to top,red, yellow);
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* .roue{
+  animation: logo-spin infinite linear;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.all{
+  color: #ffffff;
+  background-color: #05c07edd;
+  background: #0577d5ee;
+  background-color: #ffff05ca;
+}
+
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+  background: #d60156;
+}
+a:hover {
+  color: #535bf2;
+}
+
+.mar-app{margin-top: 40px;margin-bottom: 150px; text-align: center;}
+.mar-app-1{margin-top: 150px;margin-bottom: 0px;}
+.mar-app-2{margin-top: 0px;margin-bottom: 125px;}
+
+.bg-load{
+  background:  linear-gradient(to top,red, yellow);
+}
+
+.flex1{
+  display: grid;
+  align-items: center;margin-bottom: 30px;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'ch1 ch2';
+  gap: 15rem;
+}
+.flex-grow1{grid-area: ch1;}
+.flex-grow2{grid-area: ch2;}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.button-a {
+  color:white;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background: #878bcf;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.button-a:hover {
+  border-color: #878bcf;
+}
+.button-a:focus,
+.button-a:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button-j {
+  color:white;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background: rgb(255, 132, 0);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.button-j:hover {
+  border-color: white;
+}
+.button-j:focus,
+.button-j:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button-k {
+  color:white;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background: rgb(5, 105, 245);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.button-k:hover {
+  border-color: white;
+}
+.button-k:focus,
+.button-k:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button-b {
+  color:black;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.button-b:hover {
+  border-color: white;
+}
+.button-b:focus,
+.button-b:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button-c {
+  color:black;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.button-c:hover {
+  border-color: white;
+}
+.button-c:focus,
+.button-c:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+.button-d {
+  color:black;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.button-d:hover {
+  border-color: black;
+}
+.button-d:focus,
+.button-d:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button-info {
+  position: fixed;
+  top: 10px;
+  right: 30px;
+  color:black;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.button-info:hover {
+  border-color: white;
+}
+.button-info:focus,
+.button-info:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* 
+
+.custom-popover {
+  --bs-popover-max-width: 200px;
+  --bs-popover-border-color: var(--bd-violet-bg);
+  --bs-popover-header-bg: var(--bd-violet-bg);
+  --bs-popover-header-color: var(--bs-white);
+  --bs-popover-body-padding-x: 1rem;
+  --bs-popover-body-padding-y: .5rem;
+} */
+
+.button-e {
+  color:white;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1164c3;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.button-e:hover {
+  border-color: #fff;
+}
+.button-e:focus,
+.button-e:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.grid{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "ch1 ch2" "ch3 ch4";
+  gap: 4rem;
+}
+
+.grid-child-1{
+  grid-area: ch1;
+}
+
+.grid-child-2{
+  grid-area: ch2;
+}
+
+.grid-child-3{
+  grid-area: ch3;
+}
+
+.grid-child-4{
+  grid-area: ch4;
+}
+
+
+.my-wrapper{
+  width: 90%;
+  max-width: 34.37em;
+  max-height: 90vh;
+  /* background-color: rgb(239, 131, 7); */
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  padding: 3em;
+  border-radius: 75%;
+  box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
+}
+
+.contain{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.wheeling{
+  /* position: relative; */
+  max-height: inherit;
+  top: 0;
+  padding: 0;
+  /* animation: rotate 7s linear infinite; */
+}
+
+.myWheel{
+  animation: rotate 7s linear infinite;
+}
+
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.marg-action{
+  position: absolute;
+  top: 86%;
+  left: 43%;
+}
+
+
+.text-chance{
+  position: absolute;
+  top: 84%;
+  left: 46%;
+}
+
+.text-res{
+  position: absolute;
+  top: 37%;
+  left: 42.5%;
+}
+
+.marg-action-back{
+  position: absolute;
+  top: 73%;
+  left:26%;
+}
+
+.my-spin-btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left:50%;
+  height: 26%;
+  width: 26%;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0;
+  /* background: ;
+  color: ; */
+  text-transform: uppercase;
+  font-size: 1.8em;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.bs{
+  position: absolute;
+  color: red;
+  /* color: rgb(7, 158, 245); */
+  width: 4em;
+  top: 47%;right: -19%;
+  transform: rotateZ(83deg); 
+} 
+
+
+
+@media screen and (max-width: 1250px){
+  .marg-action{
+    position: absolute;
+    top: 88%;
+    left: 43%;
+  }
+}
+
+
+@media screen and (max-width: 1050px){
+  .marg-action{
+    position: absolute;
+    top: 89%;
+    left: 43%;
+  }
+
+  .marg-action-back{
+    position: absolute;
+    top: 74%;
+    left:32%;
+  }
+  
+  .bs{
+    position: absolute;
+    color: red;
+    width: 4em;
+    top: 47%;right: -18%;
+    transform: rotateZ(83deg); 
+  } 
+}
+
+
+@media screen and (max-width: 950px){
+  .bs{
+    position: absolute;
+    color: red;
+    width: 4em;
+    top: 47%;right: -17%;
+    transform: rotateZ(83deg); 
+  } 
+}
+
+
+@media screen and (max-width: 768px){
+  .text-chance{
+    position: absolute;
+    top: 75%;
+    left: 43%;
+  }
+
+  .my-wrapper{
+    font-size: 12px;
+  }
+
+  .bs{
+    right: -22%;
+  }
+
+  .flex1{
+    display: grid;
+    align-items: center;margin-bottom: 30px;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'ch1 ch2';
+    gap: 7rem;
+  }
+  .flex-grow1{grid-area: ch1;}
+  .flex-grow2{grid-area: ch2;}
+}
+
+
+@media screen and (max-width: 700px){
+  .bs{
+    right: -20%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .button-e {
+    color:white;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1164c3;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  .button-e:hover {
+    border-color: #fff;
+  }
+  .button-e:focus,
+  .button-e:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+  .button-j {
+    color:white;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    background: rgb(255, 132, 0);
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  .button-j:hover {
+    border-color: white;
+  }
+  .button-j:focus,
+  .button-j:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+
+  .button-d {
+    color:black;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  .button-d:hover {
+    border-color: black;
+  }
+  .button-d:focus,
+  .button-d:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+  .button-info {
+    position: fixed;
+    top: 10px;
+    right: 30px;
+    color:black;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  .button-info:hover {
+    border-color: white;
+  }
+  .button-info:focus,
+  .button-info:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+  .flex1{
+    display: grid;
+    align-items: center;margin-bottom: 30px;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'ch1 ch1'
+                          'ch2 ch2';
+    gap: 0;
+  }
+  .flex-grow1{grid-area: ch1;}
+  .flex-grow2{grid-area: ch2;}
+}
+
+@media screen and (max-height: 657px){
+  .my-wrapper{
+    /* width: 90%; */
+    max-width: 34.37em;
+    max-height: 90vh;
+    /* background-color: rgb(239, 131, 7); */
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    padding: 3em;
+    border-radius: 75%;
+    box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
+  }
+
+  .contain{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .wheeling{
+    max-height: inherit;
+    top: 0;
+    padding: 0;
+    /* animation: rotate 7s linear infinite; */
+  }
+}
+
+@media screen and (max-width: 550px){
+  .bs{
+    right: -20%;
+  }
+
+  .marg-action-back{
+    position: absolute;
+    top: 74%;
+    left:32%;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .button-e {
+    color:white;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1164c3;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  .button-e:hover {
+    border-color: #fff;
+  }
+  .button-e:focus,
+  .button-e:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+  .button-j {
+    color:white;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    background: rgb(255, 132, 0);
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  .button-j:hover {
+    border-color: white;
+  }
+  .button-j:focus,
+  .button-j:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+
+  .button-d {
+    color:black;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  .button-d:hover {
+    border-color: black;
+  }
+  .button-d:focus,
+  .button-d:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+  .bs{
+    right: -23%;
+  }
+
+  .marg-action{
+    position: absolute;
+    top: 88%;
+    left: 35%;
+  }
+  
+  .marg-action-back{
+    position: absolute;
+    top: 73%;
+    left:32%;
+  }
+}
+
+@media screen and (max-width: 362px){
+  .bs{
+    right: -26%;
+  }
+
+  .marg-action{
+    position: absolute;
+    top: 88%;
+    left: 37%;
+  }
+
+  .marg-action-back{
+    position: absolute;
+    top: 73.3%;
+    left:36%;
+  }
+
+  .button-e {
+    color:white;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1164c3;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  .button-e:hover {
+    border-color: #fff;
+  }
+  .button-e:focus,
+  .button-e:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+  .button-j {
+    color:white;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    background: rgb(255, 132, 0);
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  .button-j:hover {
+    border-color: white;
+  }
+  .button-j:focus,
+  .button-j:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+
+  .button-d {
+    color:black;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  .button-d:hover {
+    border-color: black;
+  }
+  .button-d:focus,
+  .button-d:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+
+@media screen and (max-width: 310px){
+  .bs{
+    right: -17%;
+  }
+
+  .marg-action{
+    position: absolute;
+    top: 88%;
+    left: 37%;
+  }
+
+  .marg-action-back{
+    position: absolute;
+    top: 73.3%;
+    left:36%;
+  }
+}
