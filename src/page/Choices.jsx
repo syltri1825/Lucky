@@ -19,16 +19,6 @@ const Choices = () => {
     }
   },[])
 
-  // useEffect(() => {
-  //     setTimeout(() => {
-  //         setControlAnimation(true)
-  //     }, 0);
-
-  //     setTimeout(() => {
-  //         setControlAnimation(false)
-  //     }, 2000);
-  // }, [])
-
   return (
     <>
       <section className='container'>
@@ -41,45 +31,3 @@ const Choices = () => {
 }
 
 export default Choices
-
-
-
-
-// {
-//   controlAnimation ? 
-//   (
-//       <div id="dash-load-home" className="d-flex align-items-center justify-content-center w-100 h-100 position-fixed top-0 end-0 bottom-0 start-0 bg-load z-3">
-//           <div className="text-center">
-//               <div className="spinner-border text-white" role="status">
-//                   <span className="col visually-hidden"></span>
-//               </div>
-//           </div>
-//       </div>
-//   ) :
-//   ''
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

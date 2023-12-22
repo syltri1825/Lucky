@@ -8,7 +8,10 @@ import StartGame from './page/StartGame';
 import Choices from './page/Choices';
 import Play from './page/Play';
 import ErrorDisplay from './page/ErrorDisplay';
-import DisconnectContextProvider from './component/DisconnectContextProvider'
+import DashboardPanel from './Auth/DashboardPanel'
+import LoginRegister from './Auth/LoginRegister'
+import Redirect from './page/Redirect';
+import AccessProvider from './Context/AccessProvider.jsx';
 import {
   createBrowserRouter,
   RouterProvider
@@ -33,7 +36,7 @@ import {
 //   appId: String(import.meta.env.REACT_APP_ID),
 //   measurementId: String(import.meta.env.REACT_MEASUREMENT_ID),
 // }import DisconnectContextProvider from './component/DisconnectContextProvider';
-import Redirect from './page/Redirect';
+
 
 
 // Initialiser Firebase
@@ -62,16 +65,24 @@ const router = createBrowserRouter([
     element: <Redirect/>
   },
   {
+    path:'/DashboardPanel',
+    element: <DashboardPanel/>
+  },
+  {
+    path:'/LoginRegister',
+    element: <LoginRegister/>
+  },
+  {
     path:'/error',
     element: <ErrorDisplay/>
   },
 ])
 
 ReactDOM.createRoot(document.getElementById('clock-app-gam')).render(
-  // <DisconnectContextProvider>
+  <AccessProvider>
     <React.StrictMode>
       <RouterProvider router={router} />
     </React.StrictMode>
-  // </DisconnectContextProvider>
+  </AccessProvider>
   ,
 )

@@ -19,7 +19,10 @@ const StartGame = () => {
         luckyTitle: '',
         resultVal: null,
         start: false,
-        table: []
+        angleTable: [],
+        numberTable: [],
+        choixTable: [],
+        numberComponent: ''
     })
     const [textResult,setTextResult] = useState('')
     const [valResult,setValResult] = useState(null)
@@ -30,6 +33,13 @@ const StartGame = () => {
     const [tw,setTw] = useState(0)
     const [fi,setFi] = useState(0)
     const [progress,setProgress] = useState(0)
+    const [style,setStyle] = useState({
+        buttonI1: 'button-i1-1',buttonI2: 'button-i2-1',buttonI3: 'button-i3-1',
+        buttonI4: 'button-i4-1',buttonI5: 'button-i5-1',buttonI6: 'button-i6-1',
+        buttonI7: 'button-i7-1',buttonI8: 'button-i8-1',buttonI9: 'button-i9-1',
+        buttonI10: 'button-i10-1',buttonI11: 'button-i11-1',buttonI12: 'button-i12-1',
+        buttonI13: 'button-i13-1',buttonI14: 'button-i14-1',buttonI15: 'button-i15-1',
+    })
 
 
     const [sta,setSta] = useState(false)
@@ -39,11 +49,6 @@ const StartGame = () => {
 
     // const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
     // const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-
-
-
-
-
 
 
     useEffect(() => {
@@ -60,9 +65,8 @@ const StartGame = () => {
         if(titleAtLoad) setGameTitle(titleAtLoad)
         
     }, [])
-
-
     
+
 
     const changeTitleAtClick = (e) => {
         e.preventDefault()
@@ -123,27 +127,41 @@ const StartGame = () => {
 
     const startNow = (e) => {
         e.preventDefault()
+        
+        if(reactivePage.choixTable.length > 0){
+            manageGame()
 
-        document.getElementById('beforePlay')?.classList.toggle('d-none')
-        document.getElementById('editTitle').disabled = false
-        manageGame()
+            document.getElementById('beforePlay')?.classList.toggle('d-none')
+            document.getElementById('editTitle').disabled = false
 
-        setTimeout(() => {
-            if(!document.getElementById('modification-title-div')?.classList.contains('d-none')){
-                document.
-                getElementById('modification-title-div').
-                classList.toggle('d-none') 
-                document.
-                getElementById('game-title').
-                classList.remove('d-none') 
-                document.
-                getElementById('editTitle').disabled = false
-                // document.
-                // getElementById('beforePlay').
-                // classList.toggle('d-none')
-            }
-        }, 0);
+            setTimeout(() => {
+                if(!document.getElementById('modification-title-div')?.classList.contains('d-none')){
+                    document.
+                    getElementById('modification-title-div').
+                    classList.toggle('d-none') 
+                    document.
+                    getElementById('game-title').
+                    classList.remove('d-none') 
+                    document.
+                    getElementById('editTitle').disabled = false
+                }
+            }, 0);
+        }
+        else{
+            setTimeout(() => {
+                setReactivePage({
+                    ...reactivePage,
+                    text: `Vous devez faire vos choix de numéro`
+                })
+            }, 0);
 
+            setTimeout(() => {
+                setReactivePage({
+                    ...reactivePage,
+                    text: ''
+                })
+            }, 3000);
+        }
     }
 
 
@@ -167,8 +185,16 @@ const StartGame = () => {
                     rotation: getValueA,
                     start: true,
                     angleTable: Table.rowTableA,
-                    numberTable: Table.myTableA
+                    numberTable: Table.myTableA,
                 })
+            }, 0);
+
+            setTimeout(() => {
+                document.getElementById('bt1').disabled = true
+                document.getElementById('bt2').disabled = true
+                document.getElementById('bt3').disabled = true
+                document.getElementById('bt4').disabled = true
+                document.getElementById('bt5').disabled = true
             }, 0);
 
             setTimeout(() => {
@@ -179,8 +205,15 @@ const StartGame = () => {
                     rotation: null,
                     resultVal: null,
                     start: false,
+                    choixTable: []
                 })
             }, 2000);
+
+            setStyle({
+                ...style,
+                buttonI1: 'button-i1-1',buttonI2: 'button-i2-1',buttonI3: 'button-i3-1',
+                buttonI4: 'button-i4-1',buttonI5: 'button-i5-1',
+            })
 
             setTimeout(() => {
                 document.getElementById('displayText')?.classList.remove('d-none')
@@ -215,8 +248,21 @@ const StartGame = () => {
                     rotation: getValueB,
                     start: true,
                     angleTable: Table.rowTableB,
-                    numberTable: Table.myTableB
+                    numberTable: Table.myTableB,
                 })
+            }, 0);
+
+            setTimeout(() => {
+                document.getElementById('bt1').disabled = true
+                document.getElementById('bt2').disabled = true
+                document.getElementById('bt3').disabled = true
+                document.getElementById('bt4').disabled = true
+                document.getElementById('bt5').disabled = true
+                document.getElementById('bt6').disabled = true
+                document.getElementById('bt7').disabled = true
+                document.getElementById('bt8').disabled = true
+                document.getElementById('bt9').disabled = true
+                document.getElementById('bt10').disabled = true
             }, 0);
 
             setTimeout(() => {
@@ -227,8 +273,17 @@ const StartGame = () => {
                     rotation: null,
                     resultVal: null,
                     start: false,
+                    choixTable: []
                 })
             }, 2000);
+
+            setStyle({
+                ...style,
+                buttonI1: 'button-i1-1',buttonI2: 'button-i2-1',buttonI3: 'button-i3-1',
+                buttonI4: 'button-i4-1',buttonI5: 'button-i5-1',buttonI6: 'button-i6-1',
+                buttonI7: 'button-i7-1',buttonI8: 'button-i8-1',buttonI9: 'button-i9-1',
+                buttonI10: 'button-i10-1',
+            })
 
             setTimeout(() => {
                 document.getElementById('displayText')?.classList.remove('d-none')
@@ -262,8 +317,23 @@ const StartGame = () => {
                     rotation: getValueC,
                     start: true,
                     angleTable: Table.rowTableC,
-                    numberTable: Table.myTableC
+                    numberTable: Table.myTableC,
                 })
+            }, 0);
+
+            setTimeout(() => {
+                document.getElementById('bt1').disabled = true
+                document.getElementById('bt2').disabled = true
+                document.getElementById('bt3').disabled = true
+                document.getElementById('bt4').disabled = true
+                document.getElementById('bt5').disabled = true
+                document.getElementById('bt6').disabled = true
+                document.getElementById('bt7').disabled = true
+                document.getElementById('bt8').disabled = true
+                document.getElementById('bt9').disabled = true
+                document.getElementById('bt10').disabled = true
+                document.getElementById('bt11').disabled = true
+                document.getElementById('bt12').disabled = true
             }, 0);
 
             setTimeout(() => {
@@ -274,8 +344,17 @@ const StartGame = () => {
                     rotation: null,
                     resultVal: null,
                     start: false,
+                    choixTable: []
                 })
             }, 2000);
+
+            setStyle({
+                ...style,
+                buttonI1: 'button-i1-1',buttonI2: 'button-i2-1',buttonI3: 'button-i3-1',
+                buttonI4: 'button-i4-1',buttonI5: 'button-i5-1',buttonI6: 'button-i6-1',
+                buttonI7: 'button-i7-1',buttonI8: 'button-i8-1',buttonI9: 'button-i9-1',
+                buttonI10: 'button-i10-1',buttonI11: 'button-i11-1',buttonI12: 'button-i12-1',
+            })
 
             setTimeout(() => {
                 document.getElementById('displayText')?.classList.remove('d-none')
@@ -309,8 +388,26 @@ const StartGame = () => {
                     rotation: getValueD,
                     start: true,
                     angleTable: Table.rowTableD,
-                    numberTable: Table.myTableD
+                    numberTable: Table.myTableD,
                 })
+            }, 0);
+
+            setTimeout(() => {
+                document.getElementById('bt1').disabled = true
+                document.getElementById('bt2').disabled = true
+                document.getElementById('bt3').disabled = true
+                document.getElementById('bt4').disabled = true
+                document.getElementById('bt5').disabled = true
+                document.getElementById('bt6').disabled = true
+                document.getElementById('bt7').disabled = true
+                document.getElementById('bt8').disabled = true
+                document.getElementById('bt9').disabled = true
+                document.getElementById('bt10').disabled = true
+                document.getElementById('bt11').disabled = true
+                document.getElementById('bt12').disabled = true
+                document.getElementById('bt13').disabled = true
+                document.getElementById('bt14').disabled = true
+                document.getElementById('bt15').disabled = true
             }, 0);
 
             setTimeout(() => {
@@ -321,8 +418,18 @@ const StartGame = () => {
                     rotation: null,
                     resultVal: null,
                     start: false,
+                    choixTable: []
                 })
             }, 2000);
+
+            setStyle({
+                ...style,
+                buttonI1: 'button-i1-1',buttonI2: 'button-i2-1',buttonI3: 'button-i3-1',
+                buttonI4: 'button-i4-1',buttonI5: 'button-i5-1',buttonI6: 'button-i6-1',
+                buttonI7: 'button-i7-1',buttonI8: 'button-i8-1',buttonI9: 'button-i9-1',
+                buttonI10: 'button-i10-1',buttonI11: 'button-i11-1',buttonI12: 'button-i12-1',
+                buttonI13: 'button-i13-1',buttonI14: 'button-i14-1',buttonI15: 'button-i15-1',
+            })
 
             setTimeout(() => {
                 document.getElementById('displayText')?.classList.remove('d-none')
@@ -345,6 +452,65 @@ const StartGame = () => {
             document.
             getElementById('beforePlay')?.
             classList.remove('d-none')
+
+            if(luckyParams === '5'){
+                setTimeout(() => {
+                    document.getElementById('bt1').disabled = false
+                    document.getElementById('bt2').disabled = false
+                    document.getElementById('bt3').disabled = false
+                    document.getElementById('bt4').disabled = false
+                    document.getElementById('bt5').disabled = false
+                }, 2000);
+            }
+            else if(luckyParams === '10'){
+                setTimeout(() => {
+                    document.getElementById('bt1').disabled = false
+                    document.getElementById('bt2').disabled = false
+                    document.getElementById('bt3').disabled = false
+                    document.getElementById('bt4').disabled = false
+                    document.getElementById('bt5').disabled = false
+                    document.getElementById('bt6').disabled = false
+                    document.getElementById('bt7').disabled = false
+                    document.getElementById('bt8').disabled = false
+                    document.getElementById('bt9').disabled = false
+                    document.getElementById('bt10').disabled = false
+                }, 2000);
+            }
+            else if(luckyParams === '12'){
+                setTimeout(() => {
+                    document.getElementById('bt1').disabled = false
+                    document.getElementById('bt2').disabled = false
+                    document.getElementById('bt3').disabled = false
+                    document.getElementById('bt4').disabled = false
+                    document.getElementById('bt5').disabled = false
+                    document.getElementById('bt6').disabled = false
+                    document.getElementById('bt7').disabled = false
+                    document.getElementById('bt8').disabled = false
+                    document.getElementById('bt9').disabled = false
+                    document.getElementById('bt10').disabled = false
+                    document.getElementById('bt11').disabled = false
+                    document.getElementById('bt12').disabled = false
+                }, 2000);
+            }
+            else if(luckyParams === '15'){
+                setTimeout(() => {
+                    document.getElementById('bt1').disabled = false
+                    document.getElementById('bt2').disabled = false
+                    document.getElementById('bt3').disabled = false
+                    document.getElementById('bt4').disabled = false
+                    document.getElementById('bt5').disabled = false
+                    document.getElementById('bt6').disabled = false
+                    document.getElementById('bt7').disabled = false
+                    document.getElementById('bt8').disabled = false
+                    document.getElementById('bt9').disabled = false
+                    document.getElementById('bt10').disabled = false
+                    document.getElementById('bt11').disabled = false
+                    document.getElementById('bt12').disabled = false
+                    document.getElementById('bt13').disabled = false
+                    document.getElementById('bt14').disabled = false
+                    document.getElementById('bt15').disabled = false
+                }, 2000);
+            }
         }
     }
 
@@ -401,7 +567,532 @@ const StartGame = () => {
         return wheelSections
     }
 
+    const registerNumberChoices = (e,params) => {
+        e.preventDefault()
 
+        if(luckyParams === '5'){
+            let choice = 1
+            if(reactivePage.choixTable.length < choice){
+
+                if(params == 1){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI1: 'button-i1-2'
+                    })
+                }
+                else if(params == 2){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI2: 'button-i2-2'
+                    })
+                }
+                else if(params == 3){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI3: 'button-i3-2'
+                    })
+                }
+                else if(params == 4){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI4: 'button-i4-2'
+                    })
+                }
+                else if(params == 5){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI5: 'button-i5-2'
+                    })
+                }
+                else if(params == 6){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI6: 'button-i6-2'
+                    })
+                }
+                else if(params == 7){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI7: 'button-i7-2'
+                    })
+                }
+                else if(params == 8){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI8: 'button-i8-2'
+                    })
+                }
+                else if(params == 9){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI9: 'button-i9-2'
+                    })
+                }
+                else if(params == 10){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI10: 'button-i10-2'
+                    })
+                }
+                else if(params == 11){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI11: 'button-i11-2'
+                    })
+                }
+                else if(params == 12){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI12: 'button-i12-2'
+                    })
+                }
+                else if(params == 13){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI13: 'button-i13-2'
+                    })
+                }
+                else if(params == 14){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI14: 'button-i14-2'
+                    })
+                }
+                else if(params == 15){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI15: 'button-i15-2'
+                    })
+                }
+            }
+            else if(reactivePage.choixTable.length >= choice){
+                setTimeout(() => {
+                    setReactivePage({
+                        ...reactivePage,
+                        text: `Vous avez droit à ${choice} choix de numéro`
+                    })
+                }, 0);
+    
+                setTimeout(() => {
+                    setReactivePage({
+                        ...reactivePage,
+                        text: ''
+                    })
+                }, 3000);
+            }
+        }
+        else if(luckyParams === '10'){
+            let choice = 2
+            if(reactivePage.choixTable.length < choice){
+
+                if(params == 1){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI1: 'button-i1-2'
+                    })
+                }
+                else if(params == 2){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI2: 'button-i2-2'
+                    })
+                }
+                else if(params == 3){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI3: 'button-i3-2'
+                    })
+                }
+                else if(params == 4){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI4: 'button-i4-2'
+                    })
+                }
+                else if(params == 5){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI5: 'button-i5-2'
+                    })
+                }
+                else if(params == 6){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI6: 'button-i6-2'
+                    })
+                }
+                else if(params == 7){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI7: 'button-i7-2'
+                    })
+                }
+                else if(params == 8){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI8: 'button-i8-2'
+                    })
+                }
+                else if(params == 9){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI9: 'button-i9-2'
+                    })
+                }
+                else if(params == 10){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI10: 'button-i10-2'
+                    })
+                }
+                else if(params == 11){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI11: 'button-i11-2'
+                    })
+                }
+                else if(params == 12){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI12: 'button-i12-2'
+                    })
+                }
+                else if(params == 13){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI13: 'button-i13-2'
+                    })
+                }
+                else if(params == 14){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI14: 'button-i14-2'
+                    })
+                }
+                else if(params == 15){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI15: 'button-i15-2'
+                    })
+                }
+            }
+            else if(reactivePage.choixTable.length >= choice){
+                setTimeout(() => {
+                    setReactivePage({
+                        ...reactivePage,
+                        text: `Vous avez droit à ${choice} choix de numéro`
+                    })
+                }, 0);
+    
+                setTimeout(() => {
+                    setReactivePage({
+                        ...reactivePage,
+                        text: ''
+                    })
+                }, 3000);
+            }
+        }
+        else if(luckyParams === '12'){
+            let choice = 3
+            if(reactivePage.choixTable.length < choice){
+
+                if(params == 1){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI1: 'button-i1-2'
+                    })
+                }
+                else if(params == 2){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI2: 'button-i2-2'
+                    })
+                }
+                else if(params == 3){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI3: 'button-i3-2'
+                    })
+                }
+                else if(params == 4){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI4: 'button-i4-2'
+                    })
+                }
+                else if(params == 5){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI5: 'button-i5-2'
+                    })
+                }
+                else if(params == 6){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI6: 'button-i6-2'
+                    })
+                }
+                else if(params == 7){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI7: 'button-i7-2'
+                    })
+                }
+                else if(params == 8){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI8: 'button-i8-2'
+                    })
+                }
+                else if(params == 9){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI9: 'button-i9-2'
+                    })
+                }
+                else if(params == 10){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI10: 'button-i10-2'
+                    })
+                }
+                else if(params == 11){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI11: 'button-i11-2'
+                    })
+                }
+                else if(params == 12){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI12: 'button-i12-2'
+                    })
+                }
+                else if(params == 13){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI13: 'button-i13-2'
+                    })
+                }
+                else if(params == 14){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI14: 'button-i14-2'
+                    })
+                }
+                else if(params == 15){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI15: 'button-i15-2'
+                    })
+                }
+            }
+            else if(reactivePage.numberTable.length >= choice){
+                setTimeout(() => {
+                    setReactivePage({
+                        ...reactivePage,
+                        text: `Vous avez droit à ${choice} choix de numéro`
+                    })
+                }, 0);
+    
+                setTimeout(() => {
+                    setReactivePage({
+                        ...reactivePage,
+                        text: ''
+                    })
+                }, 3000);
+            }
+        }
+        else if(luckyParams === '15'){
+            let choice = 4
+            if(reactivePage.choixTable.length < choice){
+
+                if(params == 1){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI1: 'button-i1-2'
+                    })
+                }
+                else if(params == 2){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI2: 'button-i2-2'
+                    })
+                }
+                else if(params == 3){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI3: 'button-i3-2'
+                    })
+                }
+                else if(params == 4){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI4: 'button-i4-2'
+                    })
+                }
+                else if(params == 5){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI5: 'button-i5-2'
+                    })
+                }
+                else if(params == 6){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI6: 'button-i6-2'
+                    })
+                }
+                else if(params == 7){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI7: 'button-i7-2'
+                    })
+                }
+                else if(params == 8){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI8: 'button-i8-2'
+                    })
+                }
+                else if(params == 9){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI9: 'button-i9-2'
+                    })
+                }
+                else if(params == 10){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI10: 'button-i10-2'
+                    })
+                }
+                else if(params == 11){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI11: 'button-i11-2'
+                    })
+                }
+                else if(params == 12){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI12: 'button-i12-2'
+                    })
+                }
+                else if(params == 13){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI13: 'button-i13-2'
+                    })
+                }
+                else if(params == 14){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI14: 'button-i14-2'
+                    })
+                }
+                else if(params == 15){
+                    reactivePage.choixTable.push(params)
+                    setStyle({
+                        ...style,
+                        buttonI15: 'button-i15-2'
+                    })
+                }
+            }
+            else if(reactivePage.choixTable.length >= choice){
+                setTimeout(() => {
+                    setReactivePage({
+                        ...reactivePage,
+                        text: `Vous avez droit à ${choice} choix de numéro`
+                    })
+                }, 0);
+    
+                setTimeout(() => {
+                    setReactivePage({
+                        ...reactivePage,
+                        text: ''
+                    })
+                }, 3000);
+            }
+        }
+    }
+
+    const restart = (e,params) => {
+        e.preventDefault()
+
+        setTimeout(() => {
+            setReactivePage({
+                ...reactivePage,
+                choixTable: []
+            })
+        }, 0);
+        setStyle({
+            ...style,
+            buttonI1: 'button-i1-1',buttonI2: 'button-i2-1',buttonI3: 'button-i3-1',buttonI4: 'button-i4-1',
+            buttonI5: 'button-i5-1',buttonI6: 'button-i6-1',buttonI7: 'button-i7-1',buttonI8: 'button-i8-1',
+            buttonI9: 'button-i9-1',buttonI10: 'button-i10-1',buttonI11: 'button-i11-1',buttonI12: 'button-i12-1',
+            buttonI13: 'button-i13-1',buttonI14: 'button-i14-1',buttonI15: 'button-i15-1'
+        })
+    }
 
 
     return(
@@ -416,6 +1107,76 @@ const StartGame = () => {
                 <i className='bi bi-info'/>
             </button> */}
 
+            
+            {
+                luckyParams === '5' ?
+                (
+                    <div className="list-btn-choices">
+                        <button id="bt1" onClick={(e) => registerNumberChoices(e,1)} className={`${style.buttonI1} font-s`}>1</button>
+                        <button id="bt2" onClick={(e) => registerNumberChoices(e,2)} className={`${style.buttonI2} font-s`}>2</button>
+                        <button id="bt3" onClick={(e) => registerNumberChoices(e,3)} className={`${style.buttonI3} font-s`}>3</button>
+                        <button id="bt4" onClick={(e) => registerNumberChoices(e,4)} className={`${style.buttonI4} font-s`}>4</button>
+                        <button id="bt5" onClick={(e) => registerNumberChoices(e,5)} className={`${style.buttonI5} font-s`}>5</button>
+                        <button id="btd" title="Annuler le choix des boutons" onClick={(e) => restart(e)} className={`button-z font-s`}>Annuler</button>
+                    </div>
+                ) :
+                luckyParams === '10' ? 
+                (
+                    <div className="list-btn-choices">
+                        <button id="bt1" onClick={(e) => registerNumberChoices(e,1)} className={`${style.buttonI1} font-s`}>1</button>
+                        <button id="bt2" onClick={(e) => registerNumberChoices(e,2)} className={`${style.buttonI2} font-s`}>2</button>
+                        <button id="bt3" onClick={(e) => registerNumberChoices(e,3)} className={`${style.buttonI3} font-s`}>3</button>
+                        <button id="bt4" onClick={(e) => registerNumberChoices(e,4)} className={`${style.buttonI4} font-s`}>4</button>
+                        <button id="bt5" onClick={(e) => registerNumberChoices(e,5)} className={`${style.buttonI5} font-s`}>5</button>
+                        <button id="bt6" onClick={(e) => registerNumberChoices(e,6)} className={`${style.buttonI6} font-s`}>6</button>
+                        <button id="bt7" onClick={(e) => registerNumberChoices(e,7)} className={`${style.buttonI7} font-s`}>7</button>
+                        <button id="bt8" onClick={(e) => registerNumberChoices(e,8)} className={`${style.buttonI8} font-s`}>8</button>
+                        <button id="bt9" onClick={(e) => registerNumberChoices(e,9)} className={`${style.buttonI9} font-s`}>9</button>
+                        <button id="bt10" onClick={(e) => registerNumberChoices(e,10)} className={`${style.buttonI10} font-s`}>10</button>
+                        <button id="btd" title="Annuler le choix des boutons" onClick={(e) => restart(e)} className={`button-z font-s`}>Annuler</button>
+                    </div> 
+                ) :
+                luckyParams === '12' ? 
+                (
+                    <div className="list-btn-choices">
+                        <button id="bt1" onClick={(e) => registerNumberChoices(e,1)} className={`${style.buttonI1} font-s`}>1</button>
+                        <button id="bt2" onClick={(e) => registerNumberChoices(e,2)} className={`${style.buttonI2} font-s`}>2</button>
+                        <button id="bt3" onClick={(e) => registerNumberChoices(e,3)} className={`${style.buttonI3} font-s`}>3</button>
+                        <button id="bt4" onClick={(e) => registerNumberChoices(e,4)} className={`${style.buttonI4} font-s`}>4</button>
+                        <button id="bt5" onClick={(e) => registerNumberChoices(e,5)} className={`${style.buttonI5} font-s`}>5</button>
+                        <button id="bt6" onClick={(e) => registerNumberChoices(e,6)} className={`${style.buttonI6} font-s`}>6</button>
+                        <button id="bt7" onClick={(e) => registerNumberChoices(e,7)} className={`${style.buttonI7} font-s`}>7</button>
+                        <button id="bt8" onClick={(e) => registerNumberChoices(e,8)} className={`${style.buttonI8} font-s`}>8</button>
+                        <button id="bt9" onClick={(e) => registerNumberChoices(e,9)} className={`${style.buttonI9} font-s`}>9</button>
+                        <button id="bt10" onClick={(e) => registerNumberChoices(e,10)} className={`${style.buttonI10} font-s`}>10</button>
+                        <button id="bt11" onClick={(e) => registerNumberChoices(e,11)} className={`${style.buttonI11} font-s`}>11</button>
+                        <button id="bt12" onClick={(e) => registerNumberChoices(e,12)} className={`${style.buttonI12} font-s`}>12</button>
+                        <button id="btd" title="Annuler le choix des boutons" onClick={(e) => restart(e)} className={`button-z font-s`}>Annuler</button>
+                    </div>
+                ) :
+                luckyParams === '15' ? 
+                (
+                    <div className="list-btn-choices">
+                        <button id="bt1" onClick={(e) => registerNumberChoices(e,1)} className={`${style.buttonI1} font-s`}>1</button>
+                        <button id="bt2" onClick={(e) => registerNumberChoices(e,2)} className={`${style.buttonI2} font-s`}>2</button>
+                        <button id="bt3" onClick={(e) => registerNumberChoices(e,3)} className={`${style.buttonI3} font-s`}>3</button>
+                        <button id="bt4" onClick={(e) => registerNumberChoices(e,4)} className={`${style.buttonI4} font-s`}>4</button>
+                        <button id="bt5" onClick={(e) => registerNumberChoices(e,5)} className={`${style.buttonI5} font-s`}>5</button>
+                        <button id="bt6" onClick={(e) => registerNumberChoices(e,6)} className={`${style.buttonI6} font-s`}>6</button>
+                        <button id="bt7" onClick={(e) => registerNumberChoices(e,7)} className={`${style.buttonI7} font-s`}>7</button>
+                        <button id="bt8" onClick={(e) => registerNumberChoices(e,8)} className={`${style.buttonI8} font-s`}>8</button>
+                        <button id="bt9" onClick={(e) => registerNumberChoices(e,9)} className={`${style.buttonI9} font-s`}>9</button>
+                        <button id="bt10" onClick={(e) => registerNumberChoices(e,10)} className={`${style.buttonI10} font-s`}>10</button>
+                        <button id="bt11" onClick={(e) => registerNumberChoices(e,11)} className={`${style.buttonI11} font-s`}>11</button>
+                        <button id="bt12" onClick={(e) => registerNumberChoices(e,12)} className={`${style.buttonI12} font-s`}>12</button>
+                        <button id="bt13" onClick={(e) => registerNumberChoices(e,13)} className={`${style.buttonI13} font-s`}>13</button>
+                        <button id="bt14" onClick={(e) => registerNumberChoices(e,14)} className={`${style.buttonI14} font-s`}>14</button>
+                        <button id="bt15" onClick={(e) => registerNumberChoices(e,15)} className={`${style.buttonI15} font-s`}>15</button>
+                        <button id="btd" title="Annuler le choix des boutons" onClick={(e) => restart(e)} className={`button-z font-s`}>Annuler</button>
+                    </div>
+                ) :
+                ''
+            }
     
             <section>
                 <header className='d-flex flex-row justify-content-center align-items-center text-center mar-app'>

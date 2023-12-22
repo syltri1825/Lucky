@@ -91,16 +91,32 @@ const PieChart = ({ table, backgroundColor, label, action, rule, updateText }) =
                 clearInterval(intervalId);
                 const getResult = generateResultValue(action.rotation, action.angleTable, action.numberTable);
 
-                setTimeout(() => {
-                  setTextResult(`Le numéro gagnant est ${getResult}`);
-                  setStatus(true);
-                }, 2000);
-
-                setTimeout(() => {
-                  setStatus(false);
-                  setTextResult('');
-                  updateText(true);
-                }, 8000);
+                action.choixTable.forEach(element => {
+                  if(element === getResult){
+                    setTimeout(() => {
+                      setTextResult(`Félicitation! Vous avez gagnez le jeu. Le numéro gagnant est ${getResult}.`);
+                      setStatus(true);
+                    }, 2000);
+    
+                    setTimeout(() => {
+                      setStatus(false);
+                      setTextResult('');
+                      updateText(true);
+                    }, 8000);
+                  }
+                  else{
+                    setTimeout(() => {
+                      setTextResult(`Désolé! Vous avez perdu le jeu. Le numéro gagnant est ${getResult}.`);
+                      setStatus(true);
+                    }, 2000);
+    
+                    setTimeout(() => {
+                      setStatus(false);
+                      setTextResult('');
+                      updateText(true);
+                    }, 8000);
+                  }
+                });
               } 
             }, 10);
         }
@@ -220,16 +236,32 @@ const PieChart = ({ table, backgroundColor, label, action, rule, updateText }) =
                 clearInterval(intervalId);
                 const getResult = generateResultValue(action.rotation, action.angleTable, action.numberTable);
 
-                setTimeout(() => {
-                  setTextResult(`Le numéro gagnant est ${getResult}`);
-                  setStatus(true);
-                }, 2000);
-
-                setTimeout(() => {
-                  setStatus(false);
-                  setTextResult('');
-                  updateText(true);
-                }, 8000);
+                action.choixTable.forEach(element => {
+                  if(element === getResult){
+                    setTimeout(() => {
+                      setTextResult(`Félicitation! Vous avez gagnez le jeu. Le numéro gagnant est ${getResult}.`);
+                      setStatus(true);
+                    }, 2000);
+    
+                    setTimeout(() => {
+                      setStatus(false);
+                      setTextResult('');
+                      updateText(true);
+                    }, 8000);
+                  }
+                  else{
+                    setTimeout(() => {
+                      setTextResult(`Désolé! Vous avez perdu le jeu. Le numéro gagnant est ${getResult}.`);
+                      setStatus(true);
+                    }, 2000);
+    
+                    setTimeout(() => {
+                      setStatus(false);
+                      setTextResult('');
+                      updateText(true);
+                    }, 8000);
+                  }
+                });
               } 
             }, 10);
         }
@@ -346,16 +378,32 @@ const PieChart = ({ table, backgroundColor, label, action, rule, updateText }) =
                 clearInterval(intervalId);
                 const getResult = generateResultValue(action.rotation, action.angleTable, action.numberTable);
 
-                setTimeout(() => {
-                  setTextResult(`Le numéro gagnant est ${getResult}`);
-                  setStatus(true);
-                }, 2000);
-
-                setTimeout(() => {
-                  setStatus(false);
-                  setTextResult('');
-                  updateText(true);
-                }, 8000);
+                action.choixTable.forEach(element => {
+                  if(element === getResult){
+                    setTimeout(() => {
+                      setTextResult(`Félicitation! Vous avez gagnez le jeu. Le numéro gagnant est ${getResult}.`);
+                      setStatus(true);
+                    }, 2000);
+    
+                    setTimeout(() => {
+                      setStatus(false);
+                      setTextResult('');
+                      updateText(true);
+                    }, 8000);
+                  }
+                  else{
+                    setTimeout(() => {
+                      setTextResult(`Désolé! Vous avez perdu le jeu. Le numéro gagnant est ${getResult}.`);
+                      setStatus(true);
+                    }, 2000);
+    
+                    setTimeout(() => {
+                      setStatus(false);
+                      setTextResult('');
+                      updateText(true);
+                    }, 8000);
+                  }
+                });
               } 
             }, 10);
         }
@@ -472,16 +520,32 @@ const PieChart = ({ table, backgroundColor, label, action, rule, updateText }) =
                 clearInterval(intervalId);
                 const getResult = generateResultValue(action.rotation, action.angleTable, action.numberTable);
 
-                setTimeout(() => {
-                  setTextResult(`Le numéro gagnant est ${getResult}`);
-                  setStatus(true);
-                }, 2000);
-
-                setTimeout(() => {
-                  setStatus(false);
-                  setTextResult('');
-                  updateText(true);
-                }, 8000);
+                action.choixTable.forEach(element => {
+                  if(element === getResult){
+                    setTimeout(() => {
+                      setTextResult(`Félicitation! Vous avez gagnez le jeu. Le numéro gagnant est ${getResult}.`);
+                      setStatus(true);
+                    }, 2000);
+    
+                    setTimeout(() => {
+                      setStatus(false);
+                      setTextResult('');
+                      updateText(true);
+                    }, 8000);
+                  }
+                  else{
+                    setTimeout(() => {
+                      setTextResult(`Désolé! Vous avez perdu le jeu. Le numéro gagnant est ${getResult}.`);
+                      setStatus(true);
+                    }, 2000);
+    
+                    setTimeout(() => {
+                      setStatus(false);
+                      setTextResult('');
+                      updateText(true);
+                    }, 8000);
+                  }
+                });
               } 
             }, 10);
         }

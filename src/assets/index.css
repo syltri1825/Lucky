@@ -235,6 +235,458 @@ h1 {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+
+.button-z {
+  color:white;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: red;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+/* .button-i:hover {
+  opacity: 0.7
+} */
+.button-z:focus,
+.button-z:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+
+
+.button-i1-1 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+.button-i1-1:hover {
+  opacity: 0.7
+}
+.button-i1-1:focus,
+.button-i1-1:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+
+
+.button-i1-2 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  opacity: 0.3;
+}
+/* .button-i1:hover {
+  border: 1px solid transparent;
+} */
+.button-i1-2:focus,
+.button-i1-2:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+.button-i2-1 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+.button-i2-1:hover {
+  opacity: 0.7
+}
+.button-i2-1:focus,
+.button-i2-1:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+
+
+.button-i2-2 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  opacity: 0.3;
+}
+/* .button-i1:hover {
+  border: 1px solid transparent;
+} */
+.button-i2-2:focus,
+.button-i2-2:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button-i3-1 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+.button-i3-1:hover {
+  opacity: 0.7
+}
+.button-i3-1:focus,
+.button-i3-1:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+
+
+.button-i3-2 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  opacity: 0.3;
+}
+/* .button-i1:hover {
+  border: 1px solid transparent;
+} */
+.button-i3-2:focus,
+.button-i3-2:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button-i4-1 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+.button-i4-1:hover {
+  opacity: 0.7
+}
+.button-i4-1:focus,
+.button-i4-1:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+
+
+.button-i4-2 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  opacity: 0.3;
+}
+/* .button-i1:hover {
+  border: 1px solid transparent;
+} */
+.button-i4-2:focus,
+.button-i4-2:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button-i5-1 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+.button-i5-1:hover {
+  opacity: 0.7
+}
+.button-i5-1:focus,
+.button-i5-1:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+
+
+.button-i5-2 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  opacity: 0.3;
+}
+/* .button-i1:hover {
+  border: 1px solid transparent;
+} */
+.button-i5-2:focus,
+.button-i5-2:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+.button-i6-1 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+.button-i6-1:hover {
+  opacity: 0.7
+}
+.button-i6-1:focus,
+.button-i6-1:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+
+
+.button-i6-2 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  opacity: 0.3;
+}
+/* .button-i1:hover {
+  border: 1px solid transparent;
+} */
+.button-i6-2:focus,
+.button-i6-2:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+.button-i7-1 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+.button-i7-1:hover {
+  opacity: 0.7
+}
+.button-i7-1:focus,
+.button-i7-1:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+
+
+.button-i7-2 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  opacity: 0.3;
+}
+/* .button-i1:hover {
+  border: 1px solid transparent;
+} */
+.button-i7-2:focus,
+.button-i7-2:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button-i8-1 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+.button-i8-1:hover {
+  opacity: 0.7
+}
+.button-i8-1:focus,
+.button-i8-1:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+
+
+.button-i8-2 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  opacity: 0.3;
+}
+/* .button-i1:hover {
+  border: 1px solid transparent;
+} */
+.button-i8-2:focus,
+.button-i8-2:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+.button-i9-1 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+.button-i9-1:hover {
+  opacity: 0.7
+}
+.button-i9-1:focus,
+.button-i9-1:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+
+
+.button-i9-2 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  opacity: 0.3;
+}
+/* .button-i1:hover {
+  border: 1px solid transparent;
+} */
+.button-i9-2:focus,
+.button-i9-2:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button-i10-1 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+.button-i10-1:hover {
+  opacity: 0.7
+}
+.button-i10-1:focus,
+.button-i10-1:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+
+
+.button-i10-2 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  opacity: 0.3;
+}
+/* .button-i1:hover {
+  border: 1px solid transparent;
+} */
+.button-i10-2:focus,
+.button-i10-2:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button-i11-1 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+.button-i11-1:hover {
+  opacity: 0.7
+}
+.button-i11-1:focus,
+.button-i11-1:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+
+
+.button-i11-2 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  opacity: 0.3;
+}
+/* .button-i1:hover {
+  border: 1px solid transparent;
+} */
+.button-i11-2:focus,
+.button-i11-2:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+.button-i12-1 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+.button-i12-1:hover {
+  opacity: 0.7
+}
+.button-i12-1:focus,
+.button-i12-1:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+
+
+.button-i12-2 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  opacity: 0.3;
+}
+/* .button-i1:hover {
+  border: 1px solid transparent;
+} */
+.button-i12-2:focus,
+.button-i12-2:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+/* 
+.button-i12-1 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+.button-i:hover {
+  opacity: 0.7
+}
+.button-i12-1:focus,
+.button-i12-1:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+ */
+
+/* .button-i12-2 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  opacity: 0.3;
+} */
+/* .button-i1:hover {
+  border: 1px solid transparent;
+} */
+/* .button-i12-2:focus,
+.button-i12-2:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */
+
+.button-i13-1 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+.button-i13-1:hover {
+  opacity: 0.7
+}
+.button-i13-1:focus,
+.button-i13-1:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+
+
+.button-i13-2 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  opacity: 0.3;
+}
+/* .button-i1:hover {
+  border: 1px solid transparent;
+} */
+.button-i13-2:focus,
+.button-i13-2:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button-i14-1 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+.button-i14-1:hover {
+  opacity: 0.7
+}
+.button-i14-1:focus,
+.button-i14-1:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+
+
+.button-i14-2 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  opacity: 0.3;
+}
+/* .button-i1:hover {
+  border: 1px solid transparent;
+} */
+.button-i14-2:focus,
+.button-i14-2:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+.button-i15-1 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  box-shadow: 1px 6px 18px rgb(255, 89, 0, 8%);border: 3px solid transparent;
+}
+.button-i15-1:hover {
+  opacity: 0.7
+}
+.button-i15-1:focus,
+.button-i15-1:focus-visible {outline: 4px auto -webkit-focus-ring-color;}
+
+
+.button-i15-2 {
+  color:black;border-radius: 8px;border: 3px solid transparent;
+  padding: 0.6em 1.2em;font-size: 1em;font-weight: 500;font-family: inherit;
+  background-color: white;cursor: pointer;transition: border-color 0.25s;
+  opacity: 0.3;
+}
+/* .button-i1:hover {
+  border: 1px solid transparent;
+} */
+.button-i15-2:focus,
+.button-i15-2:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
 .button-info {
   position: fixed;
   top: 10px;
@@ -326,6 +778,19 @@ h1 {
   grid-area: ch4;
 }
 
+
+.font-s{font-size: 10px;}
+.list-btn-choices{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 15%;
+  right: 25%;
+  gap: 0.2rem;
+}
+.lbc-fg{flex-grow: 1;}
 
 .my-wrapper{
   width: 90%;
@@ -420,12 +885,41 @@ h1 {
 
 
 
+
+@media screen and (max-width: 1400px){
+  .font-s{font-size: 10px;}
+  .list-btn-choices{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 15%;
+    right: 18%;
+    gap: 0.2rem;
+  }
+  .lbc-fg{flex-grow: 1;}
+}
+
 @media screen and (max-width: 1250px){
   .marg-action{
     position: absolute;
     top: 88%;
     left: 43%;
   }
+
+  .font-s{font-size: 10px;}
+  .list-btn-choices{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 15%;
+    right: 15%;
+    gap: 0.2rem;
+  }
+  .lbc-fg{flex-grow: 1;}
 }
 
 
@@ -449,6 +943,19 @@ h1 {
     top: 47%;right: -18%;
     transform: rotateZ(83deg); 
   } 
+
+  .font-s{font-size: 10px;}
+  .list-btn-choices{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 15%;
+    right: 10%;
+    gap: 0.2rem;
+  }
+  .lbc-fg{flex-grow: 1;}
 }
 
 
@@ -460,6 +967,19 @@ h1 {
     top: 47%;right: -17%;
     transform: rotateZ(83deg); 
   } 
+
+  .font-s{font-size: 10px;}
+  .list-btn-choices{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 15%;
+    right: 5%;
+    gap: 0.2rem;
+  }
+  .lbc-fg{flex-grow: 1;}
 }
 
 
@@ -495,6 +1015,22 @@ h1 {
   .bs{
     right: -20%;
   }
+}
+
+@media screen and (max-width: 668px){
+  .font-s{font-size: 9px;}
+  .list-btn-choices{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    position: fixed;
+    top: 15%;
+    right: 1.5%;
+    gap: 0.2rem;
+  }
+  .lbc-fg{flex-grow: 1;}
 }
 
 @media screen and (max-width: 600px){
@@ -628,6 +1164,7 @@ h1 {
   .bs{
     right: -20%;
   }
+  .font-s{font-size: 8px;}
 
   .marg-action-back{
     position: absolute;
